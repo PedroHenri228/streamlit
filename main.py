@@ -17,8 +17,6 @@ def carregar_dados():
 
 
 with st.container():
-    st.write("---")
-    
     dados = carregar_dados()
     
     st.area_chart(dados, x='Nome', y='Idade')
