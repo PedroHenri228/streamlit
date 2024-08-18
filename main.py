@@ -7,9 +7,9 @@ st.title('Dashboard de Análise de Dados')
 
 @st.cache_data
 def carregar_dados():
-    url = 'https://raw.githubusercontent.com/PedroHenri228/streamlit/main/dados.json'
+    
     try:
-        df = pd.read_json(url, orient='records', lines=True)
+        df = pd.read_json('dados.json', orient='records', lines=True)
         return df
     except Exception as e:
         st.error(f'Erro ao carregar os dados: {e}')
