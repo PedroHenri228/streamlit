@@ -10,8 +10,12 @@ st.title('Dashboard de Análise de Dados')
 # Função para carregar os dados do Excel
 @st.cache_data
 def carregar_dados():
+    try:
     df = pd.read_excel('dados.xlsx')
     return df
+except Exception as e:
+    st.error(f"Ocorreu um erro ao tentar ler o arquivo Excel: {e}")
+
 
 # Carregar os dados
 dados = carregar_dados()
