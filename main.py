@@ -9,7 +9,7 @@ st.title('Dashboard de Análise de Dados')
 def carregar_dados():
     
     try:
-        df = pd.read_json('dados.json', orient='records', lines=True)
+        df = pd.read_json('dados.json')
         return df
     except Exception as e:
         st.error(f'Erro ao carregar os dados: {e}')
@@ -32,4 +32,4 @@ if not dados.empty:
 else:
     st.warning('Nenhum dado disponível para exibir.')
 
-url = 'https://raw.githubusercontent.com/PedroHenri228/streamlit/main/dados.xlsx'
+url = 'https://raw.githubusercontent.com/PedroHenri228/streamlit/main/resultados.csv'
