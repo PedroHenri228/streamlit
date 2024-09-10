@@ -1,2 +1,2 @@
-# streamlit
-[Projeto Streamli](https://data-vista.streamlit.app)
+# Streamlit
+[Projeto Streamlit](https://data-vista.streamlit.app)
